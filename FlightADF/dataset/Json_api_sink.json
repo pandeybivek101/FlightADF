@@ -1,0 +1,31 @@
+{
+	"name": "Json_api_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage_sink",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"container": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat('airlines/Date_Part=', formatDateTime(utcnow(), 'yyyy-MM-dd'), '/airlines.json')",
+					"type": "Expression"
+				},
+				"fileSystem": "raw"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

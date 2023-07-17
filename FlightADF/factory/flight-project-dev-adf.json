@@ -1,0 +1,9 @@
+{
+	"name": "flight-project-dev-adf",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "573360e6-4473-4599-9ec3-5fe59c7a320f",
+		"tenantId": "74470371-5281-4e6e-bf61-e8ee95b9280f"
+	}
+}
